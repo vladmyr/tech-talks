@@ -1,5 +1,5 @@
 build-wasm:
-	mkdir ./wasm
+	mkdir -p ./wasm
 	cargo build --target wasm32-unknown-unknown
 	wasm-bindgen target/wasm32-unknown-unknown/debug/rust_wasm_hello_world.wasm \
   	--out-dir ./wasm
